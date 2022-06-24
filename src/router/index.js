@@ -1,22 +1,21 @@
-
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../views/Home.vue';
+import Home from '@/views/Home.vue';
 
 
 const routes = [
 	{
 		path: '/',
 		name: 'Home',
-        component : Home,
+		component: Home,
 		meta: {
-			title: 'Rebelo - Dev web',
+			title: 'Rebelo - Creative developper',
 		},
 	},
 	{
 		path: '/about',
 		name: 'About',
 		component: () =>
-			import('../views/About.vue'),
+			import('@/views/About.vue'),
 		meta: {
 			title: 'Rebelo - About',
 		},
@@ -26,7 +25,7 @@ const routes = [
 		name: 'Projects',
 
 		component: () =>
-			import( '../views/Projects.vue'),
+			import( '@/views/Projects.vue'),
 		meta: {
 			title: 'Rebelo - Projects',
 		},
@@ -35,7 +34,7 @@ const routes = [
 		path: '/contact',
 		name: 'Contact',
 		component: () =>
-			import('../views/Contact.vue'),
+			import('@/views/Contact.vue'),
 		meta: {
 			title: 'Rebelo - Contact',
 		},
@@ -50,7 +49,7 @@ const router = createRouter({
 	},
 });
 
-export default router;
+
 
 router.beforeEach((to, from, next) => {
 	const nearestWithTitle = to.matched
@@ -90,8 +89,10 @@ router.beforeEach((to, from, next) => {
 
 			return tag;
 		})
-
 		.forEach((tag) => document.head.appendChild(tag));
 
 	next();
+    
 });
+
+export default router;

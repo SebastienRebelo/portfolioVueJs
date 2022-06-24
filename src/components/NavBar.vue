@@ -1,22 +1,21 @@
 <template>
   <div class="nav-bar">
     <div class="header-top">
-
+       
     </div>
     <div class="header-bot">
       <router-link
-        to="/Home"
-        class="font-general-medium block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-indigo-600 dark:hover:text-indigo-300  sm:mx-4 mb-2 sm:py-2 "
+        to="/"
+        class=""
         aria-label="Home">
         Home
       </router-link>
       <router-link
         to="/projects"
-        class="font-general-medium block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-indigo-600 dark:hover:text-indigo-300  sm:mx-4 mb-2 sm:py-2 "
+        class=""
         aria-label="Projects">
         Projects
       </router-link>
-
       <router-link
         to="/about"
         class=""
@@ -35,10 +34,7 @@
 
 <script>
 export default {
-  name: 'NavBar',
-  props: {
-    msg: String
-  }
+  name: 'NavBar'
 }
 </script>
 
